@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anniversary Card</title>
+    <style>
+        #front, #inside {
+            display: none;
+        }
+        #front {
+            background-image: url('c3460479-40bd-4487-9320-3b445351ced3.webp');
+            background-size: cover;
+        }
+        .card-content {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .cursive {
+            font-family: 'Brush Script MT', cursive;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="front" class="card">
+        <div class="card-content">
+            <h1>There's nobody I would rather adventure with than you</h1>
+        </div>
+    </div>
+
+    <div id="inside" class="card">
+        <div class="card-content">
+            <h2>Happy 1 Year Anniversary!</h2>
+            <p>I'm so ecstatic to have the privilege of sharing my life's journey with you.</p>
+            <p class="cursive">Love, Chris</p>
+        </div>
+    </div>
+
+    <button onclick="flipCard()">Flip Card</button>
+
+    <script>
+        let isFront = true;
+
+        function flipCard() {
+            if (isFront) {
+                document.getElementById('front').style.display = 'none';
+                document.getElementById('inside').style.display = 'block';
+            } else {
+                document.getElementById('front').style.display = 'block';
+                document.getElementById('inside').style.display = 'none';
+            }
+            isFront = !isFront;
+        }
+
+        // Show the front initially
+        document.getElementById('front').style.display = 'block';
+    </script>
+
+</body>
+</html>
